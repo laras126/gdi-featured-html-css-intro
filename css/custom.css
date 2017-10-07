@@ -60,3 +60,12 @@ div.left-align{
     position: static;
     width: auto;
 }
+
+
+.noborder {
+    border: none;
+}
+
+.reveal section ul > li {
+    margin-bottom: 1rem;
+}
