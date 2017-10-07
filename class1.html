@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/theme/gdicool.css" id="theme">
     <link rel="stylesheet" href="css/custom.css">
 
     <!-- For syntax highlighting -->
@@ -99,39 +99,51 @@
     <section>
       <h3>History of HTML</h3>
       <ul>
-        <li>Invented by Tim Berners-Lee</li>
-        <li>Created "hypertext" to share scientific papers</li>
-        <li>First web page August 6, 1991</li>
-        <li>Standardized by w3 Consortium (pack of super nerds)</li>
+        <li class="fragment">Invented by <strong>Sir</strong> Tim Berners-Lee</li>
+        <li class="fragment">Created "hypertext" to share scientific papers</li>
+        <li class="fragment">First web page August 6, 1991</li>
+        <li class="fragment">Standardized by W3C and WHATWG (packs of arguing super nerds)</li>
       </ul>
+    </section>
+
+    <section>
+      <img src="img/olympics.jpg" alt="Tim Berners-Lee presenting at the opening ceremony for the 2012 Olympics in London" >
+      <p>Sir Tim Berners-Lee starred in the Olympics opening ceremony in London, 2012.</p>
     </section>
 
     <section>
       <h3>History of HTML</h3>
       <ul>
-        <li><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
-        <li>Early 90s</li>
-        <li>HTML 4 in 1997</li>
-        <li>XHTML in 2000</li>
-        <li>HTML 5 in 2014</li>
+        <li class="fragment"><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
+        <li class="fragment">Early 90s</li>
+        <li class="fragment">HTML 4 in 1997</li>
+        <li class="fragment">XHTML in 2000</li>
+        <li class="fragment">HTML 5 in 2014</li>
       </ul>
     </section>
 
     <section>
-      <img src="img/html5.png" alt="">
+      <img class="noborder" src="img/internet-of-things.png" alt="Internet of things diagram">
+      <p>HTML 5 enabled the modern, connected web.</p>
+      <p class="fragment">"Internet of Things", anyone?</p>
+    </section>
+
+    <section>
+      <h3>Will there be an HTML 6?</h3>
+      <p class="fragment">Probably not. HTML is now a "living standard".</p>
     </section>
 
     <!-- Terms-->
     <section>
       <h3>Terms</h3>
       <ul>
-        <li><strong>Web design</strong><br />
+        <li class="fragment"><strong>Web design</strong><br />
         The process of planning, structuring and creating a website</li>
-        <li><strong>Web development</strong><br />
+        <li class="fragment"><strong>Web development</strong><br />
         The process of programming dynamic web applications</li>
-        <li><strong>Front end</strong><br />
+        <li class="fragment"><strong>Front end</strong><br />
         The outwardly visible elements of a website or application</li>
-        <li><strong>Back end</strong><br />
+        <li class="fragment"><strong>Back end</strong><br />
         The inner workings and functionality of a website or application.</li>
       </ul>
     </section>
@@ -139,29 +151,61 @@
     <!-- Nitty gritty 1 - Clients and servers -->
     <section>
       <h3>Clients and servers</h3>
-      <p>How your computer accesses websites</p>
-      <img src = "img/client-server.png" alt="Diagram showing computer connecting to server"/>
+      <img class="noborder" src = "img/client-server.png" alt="Diagram showing computer connecting to server"/>
+      <p>How your computer accesses websites.</p>
+      <p class="fragment">Let's see some metaphors.</p>
+    </section>
+
+    <section>
+      <h3>Clients and servers</h3>
+      <img src="img/client-server-cows.jpg" alt="Image of client-server relationship as a cow nursing metaphor">
+    </section>
+
+    <section>
+      <h3>Clients and servers</h3>
+      <img class="noborder" src="img/client-server-food2.svg" alt="Image of client-server relationship as a kitchen">
+    </section>
+
+    <!-- Nitty gritty 1.5 - Front-end vs back-end -->
+    <section>
+      <h3>Front-end vs. Back-end</h3>
+      <img class="noborder" src="img/client-server-terms.svg" alt="Image of front-end and back-end as a kitchen">
+    </section>
+
+    <section>
+      <h3>Front-end vs. Back-end</h3>
+      <img class="noborder" src="img/client-server-terms2.svg" alt="Image of terms associated with front-end and back-end">
     </section>
 
     <!-- Nitty gritty 2 - Tools -->
     <section>
       <h3>Tools</h3>
       <ul>
-        <li><strong>Browser</strong><br />
+        <li class="fragment"><strong>Browser</strong><br />
         Chrome<br />
         Firefox</li>
-        <li><strong>Development Toolkit</strong><br />
+        <li class="fragment"><strong>Development Toolkit</strong><br />
         Chrome - Inspector<br />
         Firefox - Firebug</li>
-        <li><strong>Text Editor</strong><br />
-        <a href="https://atom.io/" target="_blank">Atom</a> - Windows, Mac<br />
-        <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> - Windows<br />
+        <li class="fragment"><strong>Text Editor</strong><br />
         <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> - Windows, Mac, Linux<br />
-        <a href="http://www.barebones.com/products/textwrangler/TextWrangler" target="_blank">TextWrangler</a> - Mac</li>
+        <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> - Windows, Mac, Linux<br />
+        <a href="https://atom.io/" target="_blank">Atom</a> - Windows, Mac<br />
+        <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> - Windows</li>
       </ul>
     </section>
 
     <!-- Folder Structure -->
+
+    <section>
+      <h3>A website is a bunch of files.</h3>
+      <ul>
+        <li class="fragment">Files need to be in specific places.</li>
+        <li class="fragment">File names and capitalization matter.</li>
+        <li class="fragment">Be organized!</li>
+      </ul>
+    </section>
+
     <section>
       <h3>Get Started: Folder Structure</h3>
       <p>All the files for your site should be stored within the same folder.</p>
@@ -172,7 +216,7 @@
         <li>HTML Files</li>
         <li>CSS Files</li>
         <li>Images</li>
-        <li>Script files</li>
+        <li>JavaScript files</li>
         <li>Anything else that will appear on your site</li>
       </ul>
       <p class="left-align" style="margin-top: .5em;"><small>Note: File names should not include spaces or special characters. File names ARE case sensitive.</small></p>
@@ -180,6 +224,10 @@
       <div class="halfblock">
         <img src="img/folderstructure1.png" alt="Diagram showing html-site folder with sub-folder for images, index.html, and styles.css" />
       </div>
+    </section>
+
+    <section>
+      <h3>Let's make some files and folders!</h3>
     </section>
 
     <section>
