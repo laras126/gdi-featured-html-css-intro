@@ -204,6 +204,10 @@
               <p class="fragment">Wait..what's wrong?</p>
           </section>
 
+          <section>
+            <h3>Link them up!</h3>
+          </section>
+
           <!-- CSS Syntax -->
           <section>
             <h3>CSS Syntax</h3>
@@ -300,7 +304,7 @@
           <section>
           <h3>Property Values</h3>
           <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "css">p{
+<pre><code class = "css">p {
   color: white;
   background-color: red;
   font-family: Arial, sans-serif;
@@ -328,13 +332,15 @@
             <h3>Property: Font-size</h3>
             <p>The font-size property specifies the size of the font.</p>
 <pre><code class = "css">p {
-  font-size: 12px;
-  font-size: 1.5em;
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
   font-size: 100%;
 }
 </code></pre>
             <p>Pixels</p>
             <p>"em"</p>
+            <p>"rem"</p>
             <p>Percentage</p>
           </section>
 
@@ -387,7 +393,7 @@
           <section>
             <h3>Selector: Position</h3>
             <p>So this code:</p>
-<pre><code class = "css">ul li a strong{
+<pre><code class = "css">ul li a strong {
   color: purple;
 }
 </code></pre>
@@ -408,16 +414,15 @@
           <!-- IDs and Classes-->
           <section>
             <h3>Reusing code</h3>
+            <img class="noborder" src="img/recycle.png" alt="Recycle symbol"/>
             <p>As a general coding principle, <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself.
             <p>To reuse CSS, we use IDs and classes.</p>
-            <img src="img/recycle.jpg" alt="Recycle symbol"/>
-            <p><small>Photo credit:  <a href="http://www.flickr.com/photos/yomostro/2502577270/">Yo Mostro</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a></small></p>
           </section>
           <section>
             <h3>IDs vs. Classes</h3>
-            <p><strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.<br />
+            <p><strong>ID</strong>: Should only apply to one element on a webpage, i.e., a webpage only has one footer.<br />
             The "#" is how you tell CSS "this is an id."</p>
-            <p><strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.<br />
+            <p><strong>Class</strong>: Lots of elements can have the same class, i.e., There can be many warnings on one webpage.<br />
             The "." is how you tell CSS "this is a class name."</p>
           </section>
           <section>
@@ -426,7 +431,7 @@
   property: value;
 }
 </code></pre>
-            <p>Selects all elements with an id of "footer".</p>
+            <p>Selects the element with an id of "footer".</p>
 
 <pre><code class="html">&lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;
 </code></pre>
@@ -442,9 +447,14 @@
 </code></pre>
             <p>Selects all elements with a class of "warning".</p>
 
-<pre><code class = "html">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
+<pre><code class="xml html">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
 </code></pre>
             <p>The associated HTML.</p>
+          </section>
+
+          <section>
+            <h3>General Rule: Just use classes.</h3>
+            <p>...unless you <em>know</em> you need an ID.</p>
           </section>
 
           <!-- Exercise-->
@@ -460,20 +470,22 @@
           <section>
             <h3>Cascading</h3>
             <p>Styles "cascade" down until changed</p>
-<pre><code class = "css">p{
-  color:blue;
+<pre><code class="css">p {
+  color: blue;
   font-family: 'Helvetica';
 }
+
 .red {
   color: red;
 }
+
 #special {
   font-family: Arial;
 }
 </code></pre>
-<pre><code class = "html">&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;p class ="red"&gt;Paragraph&lt;/p&gt;
-&lt;p class = "red" id ="special"&gt;Paragraph&lt;/p&gt;
+<pre><code class="xml html">&lt;p&gt;Paragraph&lt;/p &gt;
+&lt;p class="red"&gt;Paragraph&lt;/p&gt;
+&lt;p class="red" id="special"&gt;Paragraph&lt;/p&gt;
 </code></pre>
           </section>
           <section>
@@ -490,13 +502,15 @@
           <section>
             <h3>Cascading priority</h3>
             <p>Your browser also assigns priority based on the specificity of the selection. More specific selectors have higher priority.</p>
-<pre><code class = "css">.main .sale .clearance p{ //Most specific
+<pre><code class = "css">.main .sale .clearance p {
   color: red;
 }
-.header .title p{
+
+.header .title p {
   color: green;
 }
-.footer p{ //Least specific
+
+.footer p {
   color: blue;
 }
 </code></pre>
@@ -504,17 +518,36 @@
           <section>
             <h3>Cascading priority</h3>
             <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
-<pre><code class = "css">a{
+<pre><code class="css">a {
   background-color: yellow;
 }
-a{
+
+a {
   background-color: teal;
 }
-a{ //This rule wins
+
+a { /* This rule wins */
   background-color: black;
 }
 </code></pre>
           </section>
+
+<section>
+  <h3>Comments in CSS</h3>
+  <pre>
+    <code class="css">a {
+  background-color: yellow;
+}
+
+/* Should we be defining this twice?
+a {
+  background-color: teal;
+}
+*/
+    </code>
+  </pre>
+
+</section>
 
           <!-- Properties-->
           <section>
@@ -522,18 +555,21 @@ a{ //This rule wins
             <p>Many CSS properties have self-explanatory names:</p>
             <ul>
               <li>background-color</li>
-              <li>font-family</li>
-              <li>font-size</li>
+              <li>box-shadow</li>
+              <li>text-shadow</li>
               <li>color</li>
-              <li>width</li>
-              <li>height</li>
+              <li>font-size</li>
+              <li>border</li>
             </ul>
             <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
           </section>
 
           <section>
-            <h2>Questions?</h2>
+            <h2>Challenge!</h2>
+            <p>Let's add a <a href="https://fonts.google.com/">Google webfont.</a></p>
           </section>
+
+
 </div><!-- Close slides -->
 
     <div>
