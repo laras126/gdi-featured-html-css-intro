@@ -61,6 +61,20 @@ div.left-align{
     width: auto;
 }
 
+body {
+    background: #FAFAFA;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-transform: none;
+    text-shadow: none;
+    color: #1B75BC;
+}
 
 .noborder {
     border: none;
@@ -68,4 +82,12 @@ div.left-align{
 
 .reveal section ul > li {
     margin-bottom: 1rem;
+}
+
+.reveal pre {
+    font-size: 1.4rem;
+    box-shadow: none;
+    border: 1px solid lemonchiffon;
+    background-color: white;
+    padding: 10px 15px;
 }
