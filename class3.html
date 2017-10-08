@@ -56,50 +56,37 @@
         <!-- Quiz 1-->
         <section>
           <h3>Quiz Part 1</h3>
-          <p>Within your &lt;html&gt;&lt;/html&gt; tags, which are the two nested tags required for a website?</p>
-          <div class="fragment">
-  <pre><code class="html xml">&lt;html&gt;
-    &lt;head&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-  </code></pre>
-
-      </div>
+          <p>Where in an HTML page do you connect the stylesheet?</p>
+          <div class="green fragment">
+            In the &lt;head>!
+          </div>
         </section>
 
         <!-- Quiz 2-->
         <section>
           <h3>Quiz Part 2</h3>
-          <p class="fragment visible">What does a complete paragraph element look like?</p>
-          <div class="fragment">
-<pre><code class="html xml">&lt;p&gt;This is a paragraph&lt;/p&gt;
-</code></pre>
+          <p class="fragment visible">What is the difference between an &lt;ol> and a &lt;ul>?</p>
+          <div class="green fragment">
+            Ordered list vs. unordered list.
           </div>
         </section>
 
-        <!-- Quiz 3-->
+         <!-- Quiz 3-->
         <section>
           <h3>Quiz Part 3</h3>
-          <p class="fragment">What does a complete link (anchor) element look like?  Hint: needs an 'href'.</p>
-          <div class="fragment">
-<pre><code class="html xml">&lt;a href="http://google.com/"&gt;This goes to google&lt;/a&gt;
-</code></pre>
+          <p class="fragment">What is the purpose of a class?</p>
+          <div class="green fragment">
+            To differentiate similar tags for styling.
           </div>
         </section>
 
-        <!-- Inline vs. block-->
+         <!-- Quiz 4-->
         <section>
-          <h3>Inline vs Block</h3>
-          <div class="halfblock">
-            <p>So far, we have mostly seen <strong>"block"</strong> elements. They appear on the next line, like paragraphs.</p>
-            <p>There are also <strong>"inline"</strong> elements. They appear on the same line that they are written on.</p>
+          <h3>Quiz Part 4</h3>
+          <p class="fragment">What is the difference between an &lt;h1>&lt;/h1> element and an &lt;h4>&lt;/h4>?</p>
+          <div class="green fragment">
+            &lt;h1>&lt;/h1> is more important and there will be only one on a page.
           </div>
-          <div class="halfblock">
-            <img src="img/example-blockinline.png" alt="example of inline and block elements" />
-          </div>
-          <div class="clear"></div>
         </section>
 
         <section>
@@ -107,8 +94,8 @@
           <ul>
             <li>CSS divides HTML into two types: inline and block.</li>
             <li>After block elements, browsers render a new line.</li>
-            <li><strong>Inline elements:</strong> img, a, br, em, strong</li>
-            <li><strong>Block elements:</strong> p, h1, ul, li, almost everything else</li>
+            <li class="fragment"><strong>Inline elements:</strong> img, a, br, em, strong</li>
+            <li class="fragment"><strong>Block elements:</strong> p, h1, ul, li, almost everything else</li>
           </ul>
         </section>
 
@@ -124,16 +111,16 @@
         </section>
         <section>
           <h3>Div Examples</h3>
-<pre><code class="html">&lt;div&gt;
+<pre><code class="xml html">&lt;div&gt;
    &lt;p&gt;Content&lt;p&gt;
    &lt;p&gt;Content&lt;p&gt;
 &lt;/div&gt;
 </code></pre>
-<pre><code class="html">&lt;div id="header"&gt;
+<pre><code class="xml html">&lt;div class="header"&gt;
    &lt;h1&gt;Main Heading&lt;h1&gt;
 &lt;/div&gt;
 </code></pre>
-<pre><code class="html">&lt;div class="sub-content"&gt;
+<pre><code class="xml html">&lt;div class="sub-content"&gt;
    &lt;p&gt;Some more content&lt;p&gt;
 &lt;/div&gt;
 </code></pre>
@@ -149,13 +136,13 @@
 
         <section>
           <h3>Grouping elements with div, cont.</h3>
-<pre><code class="css">.align-right{
+<pre><code class="css">.align-right {
   text-align:right;
   color: purple;
   font-weight: bold;
 }
 </code></pre>
-<pre><code class="html">&lt;div class="align-right"&gt;
+<pre><code class="xml html">&lt;div class="align-right"&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
   &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
 &lt;/div&gt;
@@ -179,6 +166,7 @@
 <pre><code class ="html">&lt;header&gt;&lt;/header&gt;
 &lt;nav&gt;&lt;/nav&gt;
 &lt;article&gt;&lt;/article&gt;
+&lt;aside&gt;&lt;/aside&gt;
 &lt;section&gt;&lt;/section&gt;
 &lt;main&gt;&lt;/main&gt;
 &lt;footer&gt;&lt;/footer&gt;
@@ -202,16 +190,16 @@
     &lt;title&gt;Sample Page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;div id="header"&gt;
+    &lt;div class="header"&gt;
       &lt;h1&gt;My Page Title&lt;/h1&gt;
     &lt;/div&gt;
-    &lt;div id="content"&gt;
+    &lt;div class="content"&gt;
       &lt;p&gt;The main content&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div id="sidebar"&gt;
+    &lt;div class="sidebar"&gt;
       &lt;p&gt;Some stuff in a sidebar&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div id="footer"&gt;
+    &lt;div class="footer"&gt;
       &lt;p&gt;Copyright me&lt;/p&gt;
     &lt;/div&gt;
   &lt;/body&gt;
@@ -245,33 +233,6 @@
 </code></pre>
         </section>
 
-        <!-- Span -->
-        <section>
-          <h3>Element: Span</h3>
-          <ul>
-          <li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
-          <li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Span</h3>
-          <p>Span is used to apply a specific style inline</p>
-
-<pre><code class="css">.highlight{
-  color:teal;
-}
-</code></pre>
-<pre><code class="html">&lt;p&gt;Paragraph with &lt;span class="highlight"&gt;teal&lt;/span&gt; text.&lt;/p&gt;
-</code></pre>
-          <p>Paragraph with <span style="color:teal;">teal</span> text.</p>
-        </section>
-        <!-- Exercise-->
-         <section>
-          <h3>Let's Develop It</h3>
-         <p>Let's add some spans to our content to help highlight some text. </p>
-        </section>
-
         <!-- Pseudo class-->
         <section>
           <h3>Pseudo-classess</h3>
@@ -282,13 +243,13 @@
 
           <div class="halfblock">
             <p>Syntax:</p>
-<pre><code class="css">selector:pseudo-class{
+<pre><code class="css">selector:pseudo-class {
   property:value;
 }
 </code></pre>
             <p>Example:</p>
-<pre><code class="css">a:link{
-  text-decoration: none;
+<pre><code class="css">a:hover {
+  color: green;
 }
 </code></pre>
           </div>
@@ -391,6 +352,17 @@ border-color: #666666;
           <p>You can specify each property separately, or all three together.</p>
         </section>
 
+        <!-- Box Sizing -->
+        <section>
+          <h3>Property: Box-Sizing</h3>
+          <p>Make sure padding and border-width stay inside the element.</p>
+          <p>Use the universal selector to target all elements:</p>
+<pre><code class="css">* {
+  box-sizing: border-box;
+}
+</code></pre>
+        </section>
+
         <!-- Margin -->
         <section>
           <h3>Margin</h3>
@@ -411,11 +383,11 @@ border-color: #666666;
         <section>
           <h3>Auto Margin</h3>
           <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
-          <p>CENTERED</p>
+          <p>Centered</p>
 <pre><code class="css">margin: auto;
 width: 300px;
 </code></pre>
-          <p>FLUSH-RIGHT</p>
+          <p>Flush-right</p>
 <pre><code class="css">margin-left: auto;
 margin-right: 5px;
 width: 300px;
@@ -436,49 +408,12 @@ width: 300px;
         <!-- Exercise -->
         <section>
           <h3>Let's Develop it!</h3>
+
           <p>Let's add some padding, borders, and margins to our divs.</p>
           <p>Let's center our entire document in the browser.</p>
         </section>
 
-        <!-- Sizing -->
-        <!-- Width-->
-        <section>
-          <h3>Property: Width</h3>
-          <p>Sets the width of an element.</p>
-          <p>Does not include padding or borders. Remember to add these to the width.</p>
-<pre><code class="css">div#sidebar{
-  width: 31%;
-  padding: 1%;
-  border: none; //Total width is 33%
-}
-</code></pre>
-        </section>
 
-        <!-- height-->
-        <section>
-          <h3>Property: Height</h3>
-          <p>Sets the height of an element.</p>
-          <p>Does not include padding or borders. Remember to add these to the height.</p>
-<pre><code class="css">p.alert{
-  height: 50px;
-  padding: 5px;
-  border: 2px solid red; //Total height is 64px
-}
-</code></pre>
-        </section>
-
-        <!-- Exercise -->
-        <section>
-          <h3>Let's develop it!</h3>
-          <div>
-            <p>Add a width &amp; height to our divs.</p>
-            <p>Use IDs to target each div with CSS</p>
-          </div>
-        </section>
-
-        <section>
-          <h2>Questions?</h2>
-        </section>
 </div><!-- Close slides -->
 
     <div>
